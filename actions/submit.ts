@@ -19,9 +19,9 @@ export async function submitInquiry(formData: z.infer<typeof formSchema>) {
     const headersList = headers();
     const ipAddress = headersList.get("CF-Connecting-IP")?.split(",")[0];
 
-    if (!ipAddress) {
-      throw new Error("IP address not found.");
-    }
+    // if (!ipAddress) {
+    //   throw new Error("IP address not found.");
+    // }
 
     const rawDevice = UAParser(headersList.get("user-agent"))?.device;
 

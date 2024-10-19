@@ -70,10 +70,8 @@ const InquiryTable = ({
               <TableCell>{inquiry?.device}</TableCell>
               <TableCell>{inquiry?.phoneNumber}</TableCell>
               <TableCell>{inquiry?.car}</TableCell>
-              <TableCell>{inquiry.consultant?.name || "미배정"}</TableCell>
-              <TableCell>
-                {inquiry.consultant?.phoneNumber || "미배정"}
-              </TableCell>
+              <TableCell>{inquiry.consultantName || "미배정"}</TableCell>
+              <TableCell>{inquiry.consultantPhoneNumber || "미배정"}</TableCell>
               <TableCell className="">
                 <InquirySelectionDialog
                   consultants={consultants}

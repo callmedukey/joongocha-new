@@ -7,15 +7,32 @@ async function main() {
   const admin = await prisma.admin.findFirst();
   if (admin) {
     console.log("Admin already exists");
+  } else {
+
+    await prisma.admin.create({
+      data: {
+        username: "admin",
+        password: await bcrypt.hash("admin2024!@", 10),
+      },
+    });
     
-    return;
   }
-  await prisma.admin.create({
-    data: {
-      username: "admin",
-      password: await bcrypt.hash("admin2024!@", 10),
+  const consultants = await prisma.consultant.findMany({
+    where: {
+      active: true,
     },
   });
+
+  if (consultants.length === 0) {
+    await prisma.consultant.create({
+      data: {
+        name: "OK",
+        phoneNumber: "010-7176-1792",
+        active: true,
+      },
+    });
+  }
+  return;
 }
 
 main()

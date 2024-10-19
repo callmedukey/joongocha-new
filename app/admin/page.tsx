@@ -27,13 +27,10 @@ const AdminPage = async () => {
         id: "asc",
       },
     });
-    (global as any).nextConsultant = consultants[0].id || 1;
+    (global as any).nextConsultant = consultants[0]?.id || 1;
   }
 
   const inquiries = await prisma.consultation.findMany({
-    include: {
-      consultant: true,
-    },
     orderBy: {
       createdAt: "desc",
     },
