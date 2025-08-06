@@ -1,0 +1,15 @@
+{
+    "keep": {
+        "days": true,
+        "amount": 14
+    },
+    "auditLog": "/Users/duke/Documents/GitHub/joongocha-new/logs/.c17c2e8120ebb81965d5bdf756dbcc2e68879bb0-audit.json",
+    "files": [
+        {
+            "date": 1754449560856,
+            "name": "/Users/duke/Documents/GitHub/joongocha-new/logs/application-2025-08-06.log",
+            "hash": "cbdf49211bcd5554bf03dcd863e252390deb6d85f11dae3183f95e2b833c3ece"
+        }
+    ],
+    "hashType": "sha256"
+}

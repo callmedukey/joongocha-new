@@ -36,3 +36,9 @@ yarn-error.log*
 next-env.d.ts
 
 data
+
+# Claude Code
+CLAUDE.md
+.claude/
+.claude_cache/
+claude-artifacts/
